@@ -1,0 +1,71 @@
+Total classes: 19
+Total object properties: 22
+-------------------------------------
+SubClassOf axioms (10):
+    BiologicalDeathProcess ⊑ BiologicalProcessualEntity
+    DeathEvent ⊑ ∀ precededBy.BiologicalDeathProcess
+    BiologicalProcessualEntity ⊑ Process
+    LeftTimeBoundary ⊑ TimeBoundary
+    BirthEvent ⊑ (∀ hasPatient.LivingOrganism) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+    Chronoid ⊑ = 1 hasLeftTimeBoundary.LeftTimeBoundary
+    RightTimeBoundary ⊑ TimeBoundary
+    Chronoid ⊑ = 1 hasRightTimeBoundary.RightTimeBoundary
+    TimeBoundary ⊑ Time
+    BiologicalDeathProcess ⊑ ∀ precedes.DeathEvent
+----------------------------------------
+EquivalentClasses axioms (4):
+    BirthEvent ≡ InstantaneousProcess ⊓ (∃ hasPatient.LivingOrganism) ⊓ (∃ hasProcessualPart.BiologicalProcessualEntity) ⊓ (∃ hasGeographicLocation.SpatialRegion)
+    DeathEvent ≡ InstantaneousProcess ⊓ (∃ precededBy.BiologicalDeathProcess) ⊓ (∃ hasDeathPatient.LivingOrganism) ⊓ (∃ hasGeographicLocation.SpatialRegion) ⊓ (= 1 hasPrimaryDeathCause.Process)
+    RightTimeBoundary ≡ TimeBoundary ⊓ (∃ rightTimeBoundaryOf.Chronoid)
+    LeftTimeBoundary ≡ TimeBoundary ⊓ (∃ leftTimeBoundaryOf.Chronoid)
+----------------------------------------
+DisjointClasses axioms (2):
+    LeftTimeBoundary ⊑ ¬ RightTimeBoundary
+    Chronoid ⊑ ¬ TimeBoundary
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (9):
+    ∃ projectsTo.⊤ ⊑ Process
+    ∃ timeBoundaryOf.⊤ ⊑ TimeBoundary
+    ∃ leftTimeBoundaryOf.⊤ ⊑ LeftTimeBoundary
+    ∃ hasPrimaryDeathCause.⊤ ⊑ DeathEvent
+    ∃ rightTimeBoundaryOf.⊤ ⊑ RightTimeBoundary
+    ∃ hasDeathPatient.⊤ ⊑ DeathEvent
+    ∃ hasInjuriedPatient.⊤ ⊑ InjuryEvent
+    ∃ hasConvalescentPatient.⊤ ⊑ BiologicalDeathProcess
+    ∃ existsAt.⊤ ⊑ MaterialObject
+----------------------------------------
+ObjectPropertyRange axioms (11):
+    ⊤ ⊑ ∀ hasRightTimeBoundary.RightTimeBoundary
+    ⊤ ⊑ ∀ hasInstant.RightTimeBoundary
+    ⊤ ⊑ ∀ projectsTo.Chronoid
+    ⊤ ⊑ ∀ existsAt.TimeBoundary
+    ⊤ ⊑ ∀ hasPrimaryDeathCause.Condition
+    ⊤ ⊑ ∀ hasGeographicLocation.SpatialRegion
+    ⊤ ⊑ ∀ hasDeathPatient.LivingOrganism
+    ⊤ ⊑ ∀ hasLeftTimeBoundary.LeftTimeBoundary
+    ⊤ ⊑ ∀ hasInjuriedPatient.LivingOrganism
+    ⊤ ⊑ ∀ hasConvalescentPatient.LivingOrganism
+    ⊤ ⊑ ∀ hasTimeBoundary.TimeBoundary
+----------------------------------------
+SubObjectPropertyOf axioms (10):
+    hasConvalescentPatient ⊑ hasPatient
+    rightTimeBoundaryOf ⊑ timeBoundaryOf
+    hasRightTimeBoundary ⊑ hasTimeBoundary
+    hasLeftTimeBoundary ⊑ hasTimeBoundary
+    hasInjuriedPatient ⊑ hasPatient
+    leftTimeBoundaryOf ⊑ timeBoundaryOf
+    hasPatient ⊑ hasParticipant
+    hasDeathPatient ⊑ hasPatient
+    hasPrimaryDeathCause ⊑ causedBy
+    deathPatientOf ⊑ patientIn
+----------------------------------------
+InverseObjectProperties axioms (3):
+    deathPatientOf ≡ hasDeathPatient⁻
+    hasRightTimeBoundary ≡ rightTimeBoundaryOf⁻
+    hasLeftTimeBoundary ≡ leftTimeBoundaryOf⁻
+----------------------------------------
+Total axioms: 49

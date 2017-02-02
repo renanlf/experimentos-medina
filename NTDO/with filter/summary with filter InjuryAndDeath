@@ -1,0 +1,22 @@
+-------------------------------------
+SubClassOf axioms (0):
+----------------------------------------
+    BirthEvent ≡ InstantaneousProcess ⊓ (∃ hasPatient.LivingOrganism) ⊓ (∃ hasProcessualPart.BiologicalProcessualEntity) ⊓ (∃ hasGeographicLocation.SpatialRegion)
+    DeathEvent ≡ InstantaneousProcess ⊓ (∃ precededBy.BiologicalDeathProcess) ⊓ (∃ hasDeathPatient.LivingOrganism) ⊓ (∃ hasGeographicLocation.SpatialRegion) ⊓ (= 1 hasPrimaryDeathCause.Process)
+EquivalentClasses axioms (2):
+----------------------------------------
+DisjointClasses axioms (0):
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (0):
+----------------------------------------
+ObjectPropertyRange axioms (0):
+----------------------------------------
+SubObjectPropertyOf axioms (0):
+----------------------------------------
+InverseObjectProperties axioms (0):
+----------------------------------------
+Total axioms: 2

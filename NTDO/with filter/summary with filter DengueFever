@@ -1,0 +1,25 @@
+-------------------------------------
+    DengueVirusTransferByVector ⊑ (∀ hasAgent.AedesAegypti) ⊓ (∀ hasPatient.((DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4) ⊓ (∀ causes.DengueFever))) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+SubClassOf axioms (1):
+----------------------------------------
+    DengueVirusTransferByVector ≡ Transfer ⊓ (∃ hasAgent.AedesAegypti) ⊓ (∃ hasGeographicLocation.SpatialRegion) ⊓ (∀ hasPatient.((DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4) ⊓ (∃ physicallyLocatedIn.Human)))
+    DengueFever ≡ PathologicalProcess ⊓ (∃ causedBy.(DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4)) ⊓ (∃ hasLocus.Human) ⊓ (∃ realizationOf.DengueFeverDisposition)
+    Human ⊓ (∃ physicalLocationOf.(DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4)) ≡ ∃ bearerOf.DengueFeverDisposition
+EquivalentClasses axioms (3):
+----------------------------------------
+    DEN1 ⊑ ¬ DEN2, DEN1 ⊑ ¬ DEN3, DEN1 ⊑ ¬ DEN4, DEN2 ⊑ ¬ DEN3, DEN2 ⊑ ¬ DEN4, DEN3 ⊑ ¬ DEN4
+DisjointClasses axioms (1):
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (0):
+----------------------------------------
+ObjectPropertyRange axioms (0):
+----------------------------------------
+SubObjectPropertyOf axioms (0):
+----------------------------------------
+InverseObjectProperties axioms (0):
+----------------------------------------
+Total axioms: 5

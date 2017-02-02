@@ -1,0 +1,44 @@
+Total classes: 18
+Total object properties: 13
+-------------------------------------
+SubClassOf axioms (13):
+    DengueFeverDisposition ⊑ PathologicalDisposition
+    AedesAegypti ⊑ Insect
+    DengueFever ⊑ PathologicalProcess
+    DEN2 ⊑ DengueVirus
+    Transfer ⊑ Process
+    DEN3 ⊑ DengueVirus
+    DEN4 ⊑ DengueVirus
+    DengueVirusTransferByVector ⊑ (∀ hasAgent.AedesAegypti) ⊓ (∀ hasPatient.((DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4) ⊓ (∀ causes.DengueFever))) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+    DengueFeverDisposition ⊑ ∀ hasRealization.DengueFever
+    DengueFever ⊑ ∀ realizationOf.DengueFeverDisposition
+    DengueVirusTransferByVector ⊑ Transfer
+    DengueVirus ⊑ Virus
+    DEN1 ⊑ DengueVirus
+----------------------------------------
+EquivalentClasses axioms (3):
+    DengueVirusTransferByVector ≡ Transfer ⊓ (∃ hasAgent.AedesAegypti) ⊓ (∃ hasGeographicLocation.SpatialRegion) ⊓ (∀ hasPatient.((DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4) ⊓ (∃ physicallyLocatedIn.Human)))
+    DengueFever ≡ PathologicalProcess ⊓ (∃ causedBy.(DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4)) ⊓ (∃ hasLocus.Human) ⊓ (∃ realizationOf.DengueFeverDisposition)
+    Human ⊓ (∃ physicalLocationOf.(DEN1 ⊔ DEN2 ⊔ DEN3 ⊔ DEN4)) ≡ ∃ bearerOf.DengueFeverDisposition
+----------------------------------------
+DisjointClasses axioms (1):
+    DEN1 ⊑ ¬ DEN2, DEN1 ⊑ ¬ DEN3, DEN1 ⊑ ¬ DEN4, DEN2 ⊑ ¬ DEN3, DEN2 ⊑ ¬ DEN4, DEN3 ⊑ ¬ DEN4
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (1):
+    ∃ geographicallyLocatedIn.⊤ ⊑ SpatialRegion
+----------------------------------------
+ObjectPropertyRange axioms (1):
+    ⊤ ⊑ ∀ hasGeographicLocation.SpatialRegion
+----------------------------------------
+SubObjectPropertyOf axioms (2):
+    geographicallyLocatedIn ⊑ spatiallyRelatedTo
+    hasGeographicLocation ⊑ spatiallyRelatedTo
+----------------------------------------
+InverseObjectProperties axioms (1):
+    geographicallyLocatedIn ≡ hasGeographicLocation⁻
+----------------------------------------
+Total axioms: 22

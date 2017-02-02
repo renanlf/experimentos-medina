@@ -1,0 +1,27 @@
+-------------------------------------
+    Process ⊑ (∃ hasDuration.TimeInterval) ⊔ (∃ hasPointInTime.PointInTime) ⊔ (= 1 projectsTo.Chronoid)
+    InjuryEvent ⊑ InstantaneousProcess ⊓ (∀ causedBy.(Process ⊓ (¬BiologicalProcessualEntity))) ⊓ (∀ hasInjuriedPatient.LivingOrganism) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+    BiologicalDeathProcess ⊑ (∀ causedBy.(PathologicalProcess ⊔ InjuryEvent)) ⊓ (∀ hasConvalescentPatient.LivingOrganism) ⊓ (= 1 projectsTo.Chronoid)
+    HealthSurveillanceNotificationAction ⊑ (∀ precededBy.(PathologicalProcess ⊔ DeathEvent)) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+SubClassOf axioms (4):
+----------------------------------------
+    HealthSurveillanceNotificationAction ≡ Action ⊓ (∃ precededBy.(PathologicalProcess ⊔ DeathEvent)) ⊓ (∃ hasGeographicLocation.SpatialRegion)
+EquivalentClasses axioms (1):
+----------------------------------------
+    BiologicalSizeValueRegion ⊑ ¬ CanonicityValueRegion, BiologicalSizeValueRegion ⊑ ¬ DevelopmentalValueRegion, BiologicalSizeValueRegion ⊑ ¬ StateOfMatterValueRegion, BiologicalSizeValueRegion ⊑ ¬ TaxonValueRegion, BiologicalSizeValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, CanonicityValueRegion ⊑ ¬ DevelopmentalValueRegion, CanonicityValueRegion ⊑ ¬ StateOfMatterValueRegion, CanonicityValueRegion ⊑ ¬ TaxonValueRegion, CanonicityValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, DevelopmentalValueRegion ⊑ ¬ StateOfMatterValueRegion, DevelopmentalValueRegion ⊑ ¬ TaxonValueRegion, DevelopmentalValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, StateOfMatterValueRegion ⊑ ¬ TaxonValueRegion, StateOfMatterValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, TaxonValueRegion ⊑ ¬ OrganismCharacteristicValueRegion
+DisjointClasses axioms (1):
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (0):
+----------------------------------------
+ObjectPropertyRange axioms (0):
+----------------------------------------
+SubObjectPropertyOf axioms (0):
+----------------------------------------
+InverseObjectProperties axioms (0):
+----------------------------------------
+Total axioms: 6
+

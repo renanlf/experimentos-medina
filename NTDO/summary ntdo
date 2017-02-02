@@ -1,0 +1,81 @@
+Total classes: 63
+Total object properties: 14
+-------------------------------------
+SubClassOf axioms (49):
+    LivingOrganism ⊑ ∀ hasLocus.LivingOrganism
+    ArgentinaLocation ⊑ CountryLocation
+    Process ⊑ (∃ hasDuration.TimeInterval) ⊔ (∃ hasPointInTime.PointInTime) ⊔ (= 1 projectsTo.Chronoid)
+    Action ⊑ Process
+    PanamaLocation ⊑ CountryLocation
+    InstantaneousProcess ⊑ = 1 hasInstant.RightTimeBoundary
+    PATO_0001894 ⊑ PATO_0000047
+    BirthEvent ⊑ InstantaneousProcess
+    ParaguayLocation ⊑ CountryLocation
+    Chronoid ⊑ Time
+    DeathEvent ⊑ ∀ precedes.HealthSurveillanceNotificationAction
+    InjuryEvent ⊑ InstantaneousProcess
+    InjuryEvent ⊑ InstantaneousProcess ⊓ (∀ causedBy.(Process ⊓ (¬BiologicalProcessualEntity))) ⊓ (∀ hasInjuriedPatient.LivingOrganism) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+    OrganismCharacteristicValueRegion ⊑ ValueRegion
+    HealthSurveillanceNotificationAction ⊑ Action
+    BiologicalDeathProcess ⊑ (∀ causedBy.(PathologicalProcess ⊔ InjuryEvent)) ⊓ (∀ hasConvalescentPatient.LivingOrganism) ⊓ (= 1 projectsTo.Chronoid)
+    DeathEvent ⊑ InstantaneousProcess
+    PeruLocation ⊑ CountryLocation
+    HondurasLocation ⊑ CountryLocation
+    SurinamLocation ⊑ CountryLocation
+    GuyanaLocation ⊑ CountryLocation
+    CountryLocation ⊑ SpatialRegion
+    USALocation ⊑ CountryLocation
+    ColombiaLocation ⊑ CountryLocation
+    HealthSurveillanceNotificationAction ⊑ (∀ precededBy.(PathologicalProcess ⊔ DeathEvent)) ⊓ (∀ hasGeographicLocation.SpatialRegion)
+    DeathDisposition ⊑ Disposition
+    PATO_0001995 ⊑ ObjectQuality
+    EcuadorLocation ⊑ CountryLocation
+    VenezuelaLocation ⊑ CountryLocation
+    ElSalvadorLocation ⊑ CountryLocation
+    BrazilLocation ⊑ CountryLocation
+    Human ⊑ ∃ bearerOf.(PATO_0001894 ⊓ (∃ qualityLocated.PhenotypicSexValueRegion))
+    GuatemalaLocation ⊑ CountryLocation
+    LivingOrganism ⊑ ∀ hasGeographicLocation.SpatialRegion
+    PhenotypicSexValueRegion ⊑ OrganismCharacteristicValueRegion
+    BoliviaLocation ⊑ CountryLocation
+    PATO_0000384 ⊑ PATO_0001894
+    BelizeLocation ⊑ CountryLocation
+    GuadeloupeLocation ⊑ CountryLocation
+    MexicoLocation ⊑ CountryLocation
+    PATO_0000047 ⊑ PATO_0001995
+    MartiniqueLocation ⊑ CountryLocation
+    SpatialRegion ⊑ ImmaterialThreeDimensionalPhysicalEntity
+    DeathEvent ⊑ ∀ hasRelatedDeathCause.Condition
+    NicaraguaLocation ⊑ CountryLocation
+    CostaRicaLocation ⊑ CountryLocation
+    FrenchGuyanaLocation ⊑ CountryLocation
+    PATO_0000383 ⊑ PATO_0001894
+    DominicanLocation ⊑ CountryLocation
+----------------------------------------
+EquivalentClasses axioms (5):
+    Death ≡ DeathEvent
+    SpatialRegion ≡ SpatialRegion
+    TimeInterval ≡ Chronoid
+    PointInTime ≡ TimeBoundary
+    HealthSurveillanceNotificationAction ≡ Action ⊓ (∃ precededBy.(PathologicalProcess ⊔ DeathEvent)) ⊓ (∃ hasGeographicLocation.SpatialRegion)
+----------------------------------------
+DisjointClasses axioms (2):
+    PATO_0000383 ⊑ ¬ PATO_0000384
+    BiologicalSizeValueRegion ⊑ ¬ CanonicityValueRegion, BiologicalSizeValueRegion ⊑ ¬ DevelopmentalValueRegion, BiologicalSizeValueRegion ⊑ ¬ StateOfMatterValueRegion, BiologicalSizeValueRegion ⊑ ¬ TaxonValueRegion, BiologicalSizeValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, CanonicityValueRegion ⊑ ¬ DevelopmentalValueRegion, CanonicityValueRegion ⊑ ¬ StateOfMatterValueRegion, CanonicityValueRegion ⊑ ¬ TaxonValueRegion, CanonicityValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, DevelopmentalValueRegion ⊑ ¬ StateOfMatterValueRegion, DevelopmentalValueRegion ⊑ ¬ TaxonValueRegion, DevelopmentalValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, StateOfMatterValueRegion ⊑ ¬ TaxonValueRegion, StateOfMatterValueRegion ⊑ ¬ OrganismCharacteristicValueRegion, TaxonValueRegion ⊑ ¬ OrganismCharacteristicValueRegion
+----------------------------------------
+ClassAssertion axioms (0):
+----------------------------------------
+ObjectPropertyAssertion axioms (0):
+----------------------------------------
+ObjectPropertyDomain axioms (1):
+    ∃ hasRelatedDeathCause.⊤ ⊑ DeathEvent
+----------------------------------------
+ObjectPropertyRange axioms (1):
+    ⊤ ⊑ ∀ hasRelatedDeathCause.Condition
+----------------------------------------
+SubObjectPropertyOf axioms (1):
+    hasRelatedDeathCause ⊑ causedBy
+----------------------------------------
+InverseObjectProperties axioms (0):
+----------------------------------------
+Total axioms: 59
