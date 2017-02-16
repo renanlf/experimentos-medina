@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uag.ufrpe.br#"
+     xml:base="http://uag.ufrpe.br"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://uag.ufrpe.br"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uag.ufrpe.br#causedBy -->
+
+    <owl:ObjectProperty rdf:about="http://uag.ufrpe.br#causedBy"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#hasLocus -->
+
+    <owl:ObjectProperty rdf:about="http://uag.ufrpe.br#hasLocus"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#realizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://uag.ufrpe.br#realizationOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uag.ufrpe.br#AcuteDiffuseCutaneousLeishmaniasis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#AcuteDiffuseCutaneousLeishmaniasis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://uag.ufrpe.br#PathologicalProcess"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://uag.ufrpe.br#causedBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaAmazonensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaBraziliensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaChagasi"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaColombiensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaGarnhami"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaGuyanensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaInfantum"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaLainsoni"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaLlanosmartini"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaMexicana"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaMexicanaLike"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaNaiffi"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaPanamensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaPifanoi"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaShawi"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaSp"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaVenezuelensis"/>
+                                    <rdf:Description rdf:about="http://uag.ufrpe.br#LeishmaniaYucumensis"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://uag.ufrpe.br#hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="http://uag.ufrpe.br#Human"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://uag.ufrpe.br#realizationOf"/>
+                        <owl:someValuesFrom rdf:resource="http://uag.ufrpe.br#AcuteDiffuseCutaneousLeishmaniasisDisposition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://uag.ufrpe.br#AcuteDiffuseCutaneousLeishmaniasisDisposition -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#AcuteDiffuseCutaneousLeishmaniasisDisposition"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#Human -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#Human"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaAmazonensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaAmazonensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaBraziliensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaBraziliensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaChagasi -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaChagasi"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaColombiensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaColombiensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaGarnhami -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaGarnhami"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaGuyanensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaGuyanensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaInfantum -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaInfantum"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaLainsoni -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaLainsoni"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaLlanosmartini -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaLlanosmartini"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaMexicana -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaMexicana"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaMexicanaLike -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaMexicanaLike"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaNaiffi -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaNaiffi"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaPanamensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaPanamensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaPifanoi -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaPifanoi"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaShawi -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaShawi"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaSp -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaSp"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaVenezuelensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaVenezuelensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#LeishmaniaYucumensis -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#LeishmaniaYucumensis"/>
+    
+
+
+    <!-- http://uag.ufrpe.br#PathologicalProcess -->
+
+    <owl:Class rdf:about="http://uag.ufrpe.br#PathologicalProcess"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.0.0-RC2) http://owlapi.sourceforge.net -->
+
